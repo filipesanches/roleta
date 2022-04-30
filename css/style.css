@@ -1,22 +1,134 @@
-*{
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+* {
+  font-family: Roboto;
   margin: 0;
   padding: 0;
-  box-sizing: border-box;
+  box-sizing: 0;
 }
 header{
-  background: url(../img/roletaheader.webp) center/cover no-repeat;
-  height: 300px;
+  background: url("../img/roletaheader.webp") center/cover no-repeat;
+}
+header > div:first-child{
+  padding: 20px 5px;
+  position: relative;
   display: flex;
-  justify-content: center;
   align-items: center;
-  overflow: hidden;
+  justify-content: space-between;
+  background-color: #0d0d0d71;
 }
-header h2{
+header div h1{
+  padding: 10px;
+  color: #F20505;
+  display: flex;
+  align-items: center
+}
+header div h1 img{
+  width: 80px;
+  animation: girar-roleta 5s ease-in-out infinite;
+}
+.icone {
+  display: none;
+}
+.nav div a{
+  border-radius: 2px;
+  text-decoration: none;
+  padding: 5px 20px;
+  background-color: #41841e;
+  color: #f6b5b5;
+
+}
+.nav div a:hover{
+  background-color: #213814;
+  color: rgb(130, 37, 37);
+
+}
+header > div:last-child{
+  height: 500px;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%,rgb(0, 0, 0) 100%);
+}
+header > div:last-child h2{
+  font-size: 10vh;
+  color: #4b842e;
+  background-color: rgba(0, 0, 0, 0.741);
+  border-radius: 10px;
+  padding: 25px 30px;
+}
+section{
+  background: url("../img/cassino.jpg") center/cover no-repeat fixed;
+}
+section div{
+  padding: 20px 20px 80px 20px;
+  background: rgb(0,0,0);
+  background: linear-gradient(180deg, rgba(0,0,0,1) 20%,rgba(0, 0, 0, 0) 100%);
+
+}
+
+section div p:first-child{
+  margin-bottom: 40px;
+  color: #fff;
+  text-align: center;
+  padding: 50px 0;
+  font-size: 50px;
+
+}
+section div p:last-child{
+  margin-bottom: 40px;
+  background-color: rgb(0, 0, 0);
+  font-size: 30px;
+  text-align: center;
+  color: #F20505;
+  padding: 50px 0;
+
+}
+footer p{
   padding: 20px;
-  border-radius: 5px;
-  background-color: aliceblue;
+  font-size: 20px;
+  text-align: center;
 }
-header h2 img{
-  max-width: 150px;
-  width: 100%;
+@media screen and (max-width: 600px) {
+  .nav a {display: none;}
+  .icone {
+    display: block;
+  }
+  .icone {
+    font-size: 25px;
+    background-color: transparent;
+    border-radius: 10px;
+    padding: 20px;
+    outline: none;
+    color: #F20505;
+    border: none;
+    cursor: pointer;
+    display: block;
+    position: absolute;
+    right: 0;
+    top: 0;
+  }
+  .responsive a {
+    margin-top: 5px;
+    display: block;
+  }
+  .nav div{
+    padding: 5px;
+    position: absolute;
+    top: 60px;
+    right: 20px
+  }
+  header > div:last-child h2{
+    text-shadow: 0px 0px 10px black, 0px 0px 20px black;
+    background-color: transparent;
+  }
+}
+@keyframes girar-roleta {
+  0%{
+    transform: rotate(0deg);
+  }
+  100%{
+    transform: rotate(360deg);
+  }
+  
 }
