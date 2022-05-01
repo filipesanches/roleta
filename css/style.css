@@ -1,14 +1,23 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
 * {
   font-family: Roboto;
   margin: 0;
   padding: 0;
   box-sizing: 0;
 }
-header{
+
+header,
+section,
+footer {
+  overflow: hidden;
+}
+
+header {
   background: url("../img/roletaheader.webp") center/cover no-repeat;
 }
-header > div:first-child{
+
+header>div:first-child {
   padding: 20px 5px;
   position: relative;
   display: flex;
@@ -16,20 +25,24 @@ header > div:first-child{
   justify-content: space-between;
   background-color: #0d0d0d71;
 }
-header div h1{
+
+header div h1 {
   padding: 10px;
   color: #F20505;
   display: flex;
   align-items: center
 }
-header div h1 img{
+
+header div h1 img {
   width: 80px;
   animation: girar-roleta 5s ease-in-out infinite;
 }
+
 .icone {
   display: none;
 }
-.nav div a{
+
+.nav div a {
   border-radius: 2px;
   text-decoration: none;
   padding: 5px 20px;
@@ -37,37 +50,43 @@ header div h1 img{
   color: #f6b5b5;
 
 }
-.nav div a:hover{
+
+.nav div a:hover {
   background-color: #213814;
   color: rgb(130, 37, 37);
 
 }
-header > div:last-child{
+
+header>div:last-child {
   height: 500px;
   color: #fff;
   display: flex;
   align-items: center;
   justify-content: center;
-  background: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%,rgb(0, 0, 0) 100%);
+  background: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, rgb(0, 0, 0) 100%);
 }
-header > div:last-child h2{
+
+header>div:last-child h2 {
   font-size: 10vh;
   color: #4b842e;
   background-color: rgba(0, 0, 0, 0.741);
   border-radius: 10px;
   padding: 25px 30px;
 }
-section{
+
+
+section>div:nth-child(1) {
   background: url("../img/cassino.jpg") center/cover no-repeat fixed;
 }
-section div{
+
+section>div:nth-child(1) div {
   padding: 20px 20px 80px 20px;
-  background: rgb(0,0,0);
-  background: linear-gradient(180deg, rgba(0,0,0,1) 20%,rgba(0, 0, 0, 0) 100%);
+  background: rgb(0, 0, 0);
+  background: linear-gradient(180deg, rgba(0, 0, 0, 1) 20%, rgba(0, 0, 0, 0) 80%, rgba(0, 0, 0, 1) 100%);
 
 }
 
-section div p:first-child{
+section>div:nth-child(1) div p:first-child {
   margin-bottom: 40px;
   color: #fff;
   text-align: center;
@@ -75,25 +94,91 @@ section div p:first-child{
   font-size: 50px;
 
 }
-section div p:last-child{
+
+section>div:nth-child(1) div p:last-child {
   margin-bottom: 40px;
   background-color: rgb(0, 0, 0);
   font-size: 30px;
   text-align: center;
   color: #F20505;
-  padding: 50px 0;
+  padding: 50px 20px;
 
 }
-footer p{
+
+section>div:nth-child(2) {
+  background-color: #000;
+  color: #fff;
+  padding: 50px 20px;
+}
+
+section>div:nth-child(2) div:first-child{
+  text-align: center;
+  padding: 20px 5px;
+}
+section>div:nth-child(2) div:last-child {
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: center;
+}
+section>div:nth-child(2) div:last-child p:first-child span:first-child{
+  font-size: 12pt;
+}
+section>div:nth-child(2) div:last-child p:first-child{
+  position: relative;
+  font-size: 5vh;
+  color: #F20505;
+}
+section>div:nth-child(2) div:last-child p:first-child span:last-child::before{
+  width: 100%;
+  height: 50%;
+  background:url(../img/painel-itamaraty-risco.png) 100% 100%/contain no-repeat;
+  position: absolute;
+  top: 5px;
+  left: 0px;
+  content: "";
+  font-size: 50pt;
+  color: #F20505;
+}
+section>div:nth-child(2) div:last-child p:nth-child(2){
+  text-align: left;
+  color: #7be1ff;
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: center;
+} 
+section>div:nth-child(2) div:last-child p:nth-child(2) span:last-child{
+  font-size: 40pt;
+  padding: 0 0 0 10px;
+} 
+section>div:nth-child(2) div:last-child p:last-child a{
+  text-decoration: none;
+  background-color: #172f36;
+  padding: 10px 20px;
+  border-radius: 50px;
+  margin-top: 25px;
+  display: block;
+  color: #7be1ff;
+  transition: .5s ease-in;
+} 
+section>div:nth-child(2) div:last-child p:last-child a:hover{
+  background-color: #7be1ff;
+  color: #172f36;
+}
+footer p {
   padding: 20px;
   font-size: 20px;
   text-align: center;
 }
-@media screen and (max-width: 600px) {
-  .nav a {display: none;}
+
+@media screen and (max-width: 720px) {
+  .nav a {
+    display: none;
+  }
+
   .icone {
     display: block;
   }
+
   .icone {
     font-size: 25px;
     background-color: transparent;
@@ -108,27 +193,32 @@ footer p{
     right: 0;
     top: 0;
   }
+
   .responsive a {
     margin-top: 5px;
     display: block;
   }
-  .nav div{
+
+  .nav div {
     padding: 5px;
     position: absolute;
     top: 60px;
     right: 20px
   }
-  header > div:last-child h2{
+
+  header>div:last-child h2 {
     text-shadow: 0px 0px 10px black, 0px 0px 20px black;
     background-color: transparent;
   }
 }
+
 @keyframes girar-roleta {
-  0%{
+  0% {
     transform: rotate(0deg);
   }
-  100%{
+
+  100% {
     transform: rotate(360deg);
   }
-  
+
 }
