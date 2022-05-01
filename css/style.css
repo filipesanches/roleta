@@ -108,12 +108,25 @@ section>div:nth-child(1) div p:last-child {
 section>div:nth-child(2) {
   background-color: #000;
   color: #fff;
-  padding: 50px 20px;
+  padding: 50px 0px;
 }
-
-section>div:nth-child(2) div:first-child{
+section>div:nth-child(2) div:first-child p{
+  padding: 50px 5px;
+  background-color: #172f36;
+  margin-bottom: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  
+}
+section>div:nth-child(2) div:first-child p > span{
+  width: 100%;
   text-align: center;
+  max-width: 500px;
   padding: 20px 5px;
+  font-size: 20pt;
+  display: block;
+  border: 2px dotted #fff;
 }
 section>div:nth-child(2) div:last-child {
   display: flex;
@@ -168,6 +181,15 @@ footer p {
   padding: 20px;
   font-size: 20px;
   text-align: center;
+  background-color: #000;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+footer p img{
+  width: 80px;
+  animation: girar-roleta 5s ease-in infinite;
 }
 
 @media screen and (max-width: 720px) {
