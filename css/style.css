@@ -12,7 +12,9 @@ section,
 footer {
   overflow: hidden;
 }
-
+#header{
+  z-index: 90000;
+}
 header {
   background: url("../img/roletaheader.webp") center/cover no-repeat;
 }
@@ -83,22 +85,63 @@ header div h1 img {
 }
 
 header>div:last-child {
-  height: 500px;
   color: #fff;
   display: flex;
   align-items: center;
-  justify-content: center;
+  flex-flow: row wrap;
+  justify-content: space-around;
   background: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, rgb(0, 0, 0) 100%);
 }
 
 header>div:last-child h2 {
-  font-size: 10vh;
+  text-align: center;
+  margin-top: 200px;
+  font-size: 55pt;
   color: #4b842e;
-  background-color: rgba(0, 0, 0, 0.741);
   border-radius: 10px;
   padding: 25px 30px;
 }
+header>div:last-child p {
+  border-radius: 0 50px 0px 50px;
+  max-width: 500px;
+  width: 100%;
+  height: 300px;
+  margin: 180px 0 80px 0;
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  align-items: center;
+  border-left: 15px solid rgb(169, 169, 169);
+  border-right: 15px solid rgb(169, 169, 169);
+  background-color: rgba(255, 0, 0, 0.137);
+  /*background: url(../img/boom.png) center/contain no-repeat;*/
+}
+header>div:last-child p span{
+  border-radius: 5px;
+  font-size: 20pt;
+  color: #ffffff;
+}
+header>div:last-child p span:first-child{
+  padding: 10px;
+  background-color: #F20505;
+  text-shadow: 0 0 5px black;
+}
+header>div:last-child p span:last-child a{
+ border-radius: 30px;
+ color: #fffffc;
+ text-shadow: 0px 0px 10px black;
+ display: block;
+ text-decoration: none;
+ margin-top: 30px;
+ padding: 15px;
+ background: rgb(255,175,0);
+ background: linear-gradient(180deg, rgba(255,175,0,1) 0%, rgba(255,0,0,1) 100%);
+ transition: .5s;
+}
 
+header>div:last-child p span:last-child a:hover{
+  background: rgba(255,0,0,1);
+}
 
 section>div:nth-child(1) {
   background: url("../img/cassino.jpg") center/cover no-repeat fixed;
@@ -191,19 +234,20 @@ section>div:nth-child(2) div:last-child p:nth-child(2) {
 }
 
 section>div:nth-child(2) div:last-child p:nth-child(2) span:last-child {
-  font-size: 40pt;
+  font-size: 80pt;
   padding: 0 0 0 10px;
 }
 
 section>div:nth-child(2) div:last-child p:last-child a {
   text-decoration: none;
   background-color: #172f36;
-  padding: 10px 20px;
+  padding: 10px 30px;
   border-radius: 50px;
   margin-top: 25px;
   display: block;
   color: #7be1ff;
   transition: .5s ease-in;
+  font-size: 25pt;
 }
 
 section>div:nth-child(2) div:last-child p:last-child a:hover {
@@ -228,6 +272,10 @@ footer p img {
 }
 
 @media screen and (max-width: 790px) {
+  header>div:last-child {
+    height: auto;
+  }
+  
   .nav div a {
     display: none;
   }
@@ -287,19 +335,16 @@ footer p img {
 /*
 */
 [data-anima]{
+  position: relative;
   opacity: 0;
-  transition: .8s;
+  transition: 1s;
 
 }
-[data-anima="anima-esquerda"]{
-  margin-left: -500px;
-}
-[data-anima="anima-direita"]{
-  margin-left: 500px;
-}
 [data-anima].animacao{
+  left: 0;
   opacity: 1;
   margin: 0;
+  transform: translate(0,0,0);
 }
 @keyframes identifier {
   
