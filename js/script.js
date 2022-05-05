@@ -20,7 +20,7 @@ function myFunction() {
   const fundoMenu = document.getElementsByTagName("div")[2]
   if (x.className === "nav") {
     x.className += " responsive";
-    fundoMenu.style.backgroundColor = "#5a1919"
+    fundoMenu.style.backgroundColor = "#274418"
   } else {
     x.className = "nav";
     fundoMenu.style.backgroundColor = "transparent"
