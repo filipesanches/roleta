@@ -364,3 +364,7 @@ footer p img {
 @keyframes identifier {
   
 }
+#carrossel{
+  display: flex;
+  justify-content: center
+}
