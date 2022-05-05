@@ -278,7 +278,6 @@ footer p img {
   header>div:last-child {
     height: auto;
   }
-  
   .nav div a {
     display: none;
   }
@@ -321,6 +320,12 @@ footer p img {
   header>div:last-child h2 {
     text-shadow: 0px 0px 10px black, 0px 0px 20px black;
     background-color: transparent;
+  }
+  header>div:last-child p span {
+    margin: 10px;
+  }
+  section>div:nth-child(1) div p:first-child{
+    font-size: 25pt;
   }
 }
 
