@@ -243,8 +243,8 @@ section>div:nth-child(3) div:last-child p:nth-child(2) {
   align-items: center;
 }
 
-section>div:nth-child(2) div:last-child p:nth-child(2) span:last-child {
-  font-size: 80pt;
+section>div:nth-child(3) div:last-child p:nth-child(2) span:last-child {
+  font-size: 90pt;
   padding: 0 0 0 10px;
 }
 
